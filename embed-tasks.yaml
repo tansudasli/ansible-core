@@ -2,7 +2,7 @@
 # we can use vars from outer yaml
 - name: placeholder foo
   debug: 
-    msg: hoppa {{xyz}}
+    msg: hoppa {{xyz}} {{zyx}}
 
 - name: placeholder bar
   debug: 

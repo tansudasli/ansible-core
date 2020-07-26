@@ -2,10 +2,13 @@
   hosts: localhost
   gather_facts: no
 
+  vars:
+    zyx: "habib"
+
   tasks:
 
     #send parameters into the task lists
-    - include: embed.yaml xyz="abidin"
+    - include: embed-tasks.yaml xyz="abidin"
 
     #send parameters into the playbook 
 - include: embed-playbook.yaml
