@@ -1,0 +1,9 @@
+
+# we can use vars from outer yaml
+- name: placeholder foo
+  debug: 
+    msg: hoppa {{xyz}}
+
+- name: placeholder bar
+  debug: 
+    msg: hoppa {{xyz}}

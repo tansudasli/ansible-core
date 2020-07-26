@@ -1,0 +1,13 @@
+- name: Run the embeded tasks
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+    #send parameters into the task lists
+    - include: embed.yaml xyz="abidin"
+
+    #send parameters into the playbook 
+- include: embed-playbook.yaml
+  vars:
+    xyz: "abidin"
