@@ -1,0 +1,31 @@
+- name: lists
+  hosts: 
+    - localhost
+  become: no
+  gather_facts: no
+
+  vars:
+    user: ali
+    nodes:
+        - master
+        - secondary-master
+        - worker
+    additional_disks:
+        data-disk: {device: "/dev/sdb", type: "ext4"}     #dictionaries are always key/value format!
+        log-disk: {device: "/dev/sdc", type: "ext4"}
+
+
+  tasks:        
+   - name: Check 1
+     debug:
+      msg: "{{user}} - {{ item.key }}, {{item.value.device}}"
+     with_dict: "{{ additional_disks }}" 
+     
+   - name: Check 2 "{{item.key}}"
+     debug:
+      msg: "{{ additional_disks| dict2items}}"
+
+ 
+#    - debug:
+#       msg: "{{ pub_key.stdout }}"  
+    
