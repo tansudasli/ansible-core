@@ -1,0 +1,32 @@
+- name: try
+  hosts: 
+    - localhost
+  become: no
+  gather_facts: no
+
+  vars:
+    user: ali
+    additional_disks:
+        data-disk: {device: "/dev/sdb", type: "ext4"}
+        log-disk: 
+            device: "/dev/sdc"
+            type: "ext4"
+
+
+  tasks:        
+   - name: Check 1
+     debug:
+      msg: "{{user}} - {{ item.key }}, {{item.value.device}}"
+     with_dict: "{{ additional_disks }}" 
+     
+   - name: Check 2 {{item.key}}
+     debug:
+      msg: "{{ additional_disks| dict2items}}"
+
+   - name: ssh-key - get pub key contents
+     command: "cat /Users/tansudasli/.ssh/google_compute_engine.pub"
+     register: pub_key
+ 
+   - debug:
+      msg: "{{ pub_key.stdout }}"  
+    
