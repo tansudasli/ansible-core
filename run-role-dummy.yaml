@@ -12,4 +12,5 @@
         msg: "Message from playbook: {{xyz}}"
 
   roles: 
-    - tansudasli.role_dummy
+    - {role: tansudasli.role_dummy}
+    - {role: tansudasli.role_dummy, xyz: "abidin"}
