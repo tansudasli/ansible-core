@@ -1,0 +1,15 @@
+- name: as playbooks
+  hosts: localhost
+  gather_facts: no
+  
+  vars:
+    xyz: "zabidin"
+    
+  tasks:
+   
+    - name: placeholder foo
+      debug: 
+        msg: hoppa {{xyz}}
+
+  roles: 
+    - tansudasli.role_dummy
