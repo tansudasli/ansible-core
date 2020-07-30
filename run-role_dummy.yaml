@@ -30,5 +30,5 @@
 # So, you have to define here!
 # variab;es under /vars or /default yaml files does not mean, profides default values!
   roles: 
-    - {role: tansudasli.role_dummy}  #injects zabidin value from playbook!
+    - {role: tansudasli.role_dummy}  #injects zabidin value from playbook' var section!
     - {role: tansudasli.role_dummy, xyz: "abidin"} # injects from playbook but overrides zabidin as abidin!
