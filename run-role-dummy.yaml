@@ -1,4 +1,4 @@
-- name: as playbooks
+- name: as role
   hosts: localhost
   gather_facts: no
   
@@ -7,7 +7,7 @@
     
   tasks:
    
-    - name: placeholder foo
+    - name: from playbook
       debug: 
         msg: "Message from playbook: {{xyz}}"
 
