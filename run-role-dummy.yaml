@@ -9,7 +9,7 @@
    
     - name: placeholder foo
       debug: 
-        msg: hoppa {{xyz}}
+        msg: "Message from playbook: {{xyz}}"
 
   roles: 
     - tansudasli.role_dummy
