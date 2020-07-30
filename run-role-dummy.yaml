@@ -1,4 +1,4 @@
-- name: run the role
+- name: Run the role
   hosts: localhost
   gather_facts: no
   
