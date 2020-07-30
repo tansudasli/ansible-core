@@ -1,16 +1,18 @@
-- name: as role
+- name: run the role
   hosts: localhost
   gather_facts: no
   
   vars:
     xyz: "zabidin"
-    
+
   tasks:
    
     - name: from playbook
       debug: 
         msg: "Message from playbook: {{xyz}}"
 
+# in roles, all variables has to passed from run playbook!
+# variab;es under /vars or /default yaml files does not mean, profides default values!
   roles: 
-    - {role: tansudasli.role_dummy}
-    - {role: tansudasli.role_dummy, xyz: "abidin"}
+    - {role: tansudasli.role_dummy}  #injects zabidin value from playbook!
+    - {role: tansudasli.role_dummy, xyz: "abidin"} # injects from playbook but overrides zabidin as abidin!
