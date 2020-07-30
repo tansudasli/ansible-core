@@ -5,6 +5,21 @@
   vars:
     xyz: "zabidin"
 
+    #  complex variable scenario
+    nodes:
+      - name: master-node
+        zone: europe-west4-a
+        machine_type: f1-micro
+        ips:
+            - nic: 
+                name: "ip-01"
+      - name: worker-node
+        zone: europe-west4-a
+        machine_type: f1-micro
+        ips:
+          - nic: 
+              name: "w-ip-01"
+
   tasks:
    
     - name: from playbook
@@ -12,6 +27,7 @@
         msg: "Message from playbook: {{xyz}}"
 
 # in roles, all variables has to passed from run playbook!
+# So, you have to define here!
 # variab;es under /vars or /default yaml files does not mean, profides default values!
   roles: 
     - {role: tansudasli.role_dummy}  #injects zabidin value from playbook!
