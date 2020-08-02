@@ -15,6 +15,6 @@ Ansible core concepts
 
 ### About roles
 
-- `ansible-galaxy install tansudasli.role_dummy` to get last version of the role.
+- `ansible-galaxy install tansudasli.dummy` to get last version of the role.
 - `ansible-playbook run-role_dummy.yaml` to run the role
 
