@@ -34,11 +34,11 @@
 #   b) define variables under role below  
   roles: 
     # a)
-    - {role: tansudasli.role_dummy}  #injects zabidin value from playbook' var section!
-    # - {role: tansudasli.role_dummy, xyz: "abidin"} # injects from playbook but overrides zabidin as abidin!
+    - {role: tansudasli.dummy}  #injects zabidin value from playbook' var section!
+    # - {role: tansudasli.dummy, xyz: "abidin"} # injects from playbook but overrides zabidin as abidin!
     
     # b)
-    # - role: tansudasli.role_dummy
+    # - role: tansudasli.dummy
     #   vars:
     #     nodes:
     #       - name: secondary-master-node
@@ -47,7 +47,7 @@
     #         ips:
     #           - nic: 
     #               name: "sm-ip-01"
-    # - role: tansudasli.role_dummy
+    # - role: tansudasli.dummy
     #   vars:
     #   nodes:
     #     - name: worker-node-2

@@ -15,6 +15,6 @@ Ansible core concepts
 
 ### About roles
 
-- `ansible-galaxy install --force --roles-path /Users/tansudasli/coding/ansible-core tansudasli.role_dummy` to get last version of the role. Adjust the download path
+- `ansible-galaxy install tansudasli.role_dummy` to get last version of the role.
 - `ansible-playbook run-role_dummy.yaml` to run the role
 
