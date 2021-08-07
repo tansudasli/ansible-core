@@ -1,0 +1,12 @@
+- name: loop concepts - run all servers
+  hosts: web
+  gather_facts: no
+
+  vars:
+    user: ali
+
+#  all tasks will run for both web01 and web02
+  tasks:
+    - name: Check
+      debug:
+        msg: "{{user}} - "
