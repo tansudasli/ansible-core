@@ -6,12 +6,20 @@ Ansible core concepts
 - [x] complex include scenarios
 - [x] complex role scenarios
 
-
 ## Installation & Basic Configurations
 
 - Install **Ansible** on your local or on a separate server. Run `brew install ansible`, then check `ansible --version`
 - Then, Design _inventory_ file to access provisioned machines. Static or dynamic inventory is possible.
 - Run, `ansible-playbook FILE_NAME.yaml -i hosts`
+
+## Some Key Concepts
+
+Addition to core capabilities, below topics are critical to understand ansible.
+
+- designing and grouping host file
+- become: user delegation (sudo ..)
+- localhost vs host : task delegation (where the task will run)
+- handling secret things w/ ansible vault
 
 ### About roles
 
