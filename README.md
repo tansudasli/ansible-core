@@ -18,3 +18,18 @@ Ansible core concepts
 - `ansible-galaxy install tansudasli.dummy` to get last version of the role.
 - `ansible-playbook run-role_dummy.yaml` to run the role
 
+### About positioning 
+
+There are 3 main steps, and some trade-offs where to use Ansible. So you should consider some critical decisions.
+
+- If you automate _machine preparations_ w/ Ansible, 
+then you may be locked w/ vendor specific things (even it is Ansible thing), or maybe it is not worth it to automate at first.
+- So Either do it manually or separate this part (1 and 2) from your logic.
+- If you need 1000 nodes, you should consider automate 1 and 2 parts (depending on bare metal, or on cloud).
+- Some parts of Ansible intersect w/ build tools. If you have gradle, you may not need create container w/ ansible.
+
+1. prepare machines -> get an IP : do it manually at the beginning.
+2. pre-configurations on the machines: such as user creations, passwordless-ssh etc... Use _cloud-init_ capability. 
+   So you can also run these scripts manually in case you need it.
+3. core installations & configs: leverage Ansible
+
