@@ -6,11 +6,10 @@
 
     # returned as below
     # "stdout": "Desktop\nDocuments\nDownloads\nLibrary\nMovies\nMusic\nPictures\nPublic\ncoding",
-    # saved in a varible as home
+    # saved in a variable as home
     - name: retrieve the files of home
       command: ls ~
       register: home
-
 
     - name: show the files
       debug: 

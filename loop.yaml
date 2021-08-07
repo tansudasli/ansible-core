@@ -31,7 +31,7 @@
       loop: "{{ ['alice', [1, 2], 'bob', 'jice', 'mice'] | flatten(levels=1) }}"
 
     # ['alice', 1], ['bob', 2], ['jice', 3]
-    # array's lenght is critical!
+    # array's length is critical!
     - name: access w/ zip
       debug: 
         msg: "{{ item }}"
